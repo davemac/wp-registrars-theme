@@ -1,0 +1,175 @@
+
+#sidebar {
+	.panel {
+		border: none;
+		background-color: transparent;
+		padding: rem-calc(12) rem-calc(15);
+		border-left: 2px solid #222;
+
+		@media #{$medium-up} {
+			margin-bottom: 3rem;
+			padding: rem-calc(24) rem-calc(30);
+		}
+
+		a {
+			font-size: rem-calc(16);
+
+			&:hover,
+			&:focus {
+				color: $body-font-color;
+			}
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		margin-left: 0;
+	}
+
+	.widget {
+		h4 {
+			text-transform: capitalize;
+			font-size: rem-calc(22);
+			padding-bottom: rem-calc(16);
+			border-bottom: 1px solid #ddd;
+			color: #222;
+			font-weight: 600;
+		}
+	}
+
+	.tribe_mini_calendar_widget {
+		margin-top: 2rem;
+		padding: 0;
+		background-color: #fff;
+	}
+
+	.tribe-events-adv-list-widget {
+		padding: rem-calc(16);
+		background: initial;
+
+		.tribe-mini-calendar-event {
+			background: initial;
+			// background-color: #078e87;
+		}
+
+		.list-date {
+			display: none;
+		}
+
+		.tribe-events-duration {
+			padding-bottom: 1rem;
+			font-size: rem-calc(15);
+			line-height: 1.2;
+			font-weight: $font-weight-bold;
+		}
+	}
+
+	.widget_recent_entries,
+	.widget-dmc-faqs,
+	.widget_categories,
+	.widget_recent_comments {
+		li {
+			line-height: 1.2;
+			margin-bottom: 0.75rem;
+			padding-bottom: 0.75rem;
+			border-bottom: 1px solid #fff;
+		}
+	}
+
+	.widget_nav_menu {
+		border: none;
+		padding: 0 0 rem-calc(24);
+
+		h4 {
+			margin-bottom: 0;
+			padding-left: rem-calc(16);
+		}
+
+		ul {
+			margin-bottom: 0;
+		}
+
+		li {
+
+			a {
+				display: block;
+				color: $oil;
+				padding: 0.75rem rem-calc(16) 1rem;
+				font-size: rem-calc(14);
+				font-weight: $font-weight-bold;
+				text-decoration: none;
+
+				&:hover {
+					color: #fff;
+					background-color: $cart-color;
+				}
+			}
+
+			&.current-menu-item a {
+				color: #fff;
+				background-color: $cart-color;
+			}
+		}
+	}
+}
+
+.single-dmc-conf-papers {
+	#sidebar {
+		li.menu-item-146 a {
+			color: #fff;
+			background-color: $cart-color;
+		}
+	}
+}
+
+.single-dmc-cons-resources {
+	#sidebar {
+		li.menu-item-147 a {
+			color: #fff;
+			background-color: $cart-color;
+		}
+	}
+}
+
+.single-dmc-jour-articles {
+	#sidebar {
+		li.menu-item-148 a {
+			color: $white;
+			background-color: scale-color($primary-color, $alpha: -15%);
+		}
+	}
+}
+
+.single-dmc-legislation {
+	#sidebar {
+		li.menu-item-149 a {
+			color: $white;
+			background-color: scale-color($primary-color, $alpha: -15%);
+		}
+	}
+}
+
+.single-dmc-library {
+	#sidebar {
+		li.menu-item-150 a {
+			color: $white;
+			background-color: scale-color($primary-color, $alpha: -15%);
+		}
+	}
+}
+
+.single-dmc-reg-networks {
+	#sidebar {
+		li.menu-item-151 a {
+			color: $white;
+			background-color: scale-color($primary-color, $alpha: -15%);
+		}
+	}
+}
+
+@media #{$large-up} {
+	#sidebar {
+		padding-left: 0;
+		padding-right: $content-spacing;
+	}
+}

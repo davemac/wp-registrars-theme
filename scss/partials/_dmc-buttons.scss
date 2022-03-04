@@ -1,0 +1,81 @@
+.button,
+.products > li .add_to_cart_button,
+.woocommerce button.button {
+	display: inline-block;
+	color: #fff !important;
+	font-size: rem-calc(18);
+	font-weight: $font-weight-bold;
+	line-height: 1;
+	text-transform: capitalize;
+	padding: $content-spacing/1.5 $content-spacing*1 !important;
+	background-color: $events-highlight;
+	border-color: #1b1b1b;
+	border-radius: 0;
+
+	&:hover {
+		background-color: darken($primary-color, 12%);
+	}
+
+	#tribe-events-content & {
+		color: #fff !important;
+		text-decoration: none !important;
+		border-radius: $global-radius;
+	}
+
+	.single-dmc-job & {
+		margin-bottom: 0;
+	}
+
+	&.ghost {
+		color: $primary-color;
+		border: 2px solid #000;
+		margin-bottom: 0;
+	}
+
+	&.next {
+		@media #{$small-only} {
+			padding-right: rem-calc(13);
+			padding-left: rem-calc(13);
+		}
+
+		&::after {
+			color: $primary-color;
+			padding-left: 0.75rem;
+			content: '\f0da';
+			font-family: FontAwesome, sans-serif;
+			font-size: 1.1rem;
+		}
+	}
+
+	&.prev {
+		@media #{$small-only} {
+			padding-right: rem-calc(13);
+			padding-left: rem-calc(13);
+		}
+
+		&::after {
+			display: none;
+		}
+
+		&::before {
+			color: $primary-color;
+			padding-right: 0.75rem;
+			content: '\f0d9';
+			font-family: FontAwesome, sans-serif;
+			font-size: 1.1rem;
+		}
+	}
+
+	&.email {
+		@media #{$medium-up} {
+			margin-right: 5rem;
+		}
+
+		&::after {
+			padding-left: 0.75rem;
+			content: '\f003';
+			font-family: FontAwesome, sans-serif;
+			font-size: 1.2rem;
+		}
+	}
+}

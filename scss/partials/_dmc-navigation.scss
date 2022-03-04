@@ -1,0 +1,137 @@
+.top-bar {
+	background-color: $secondary-color;
+}
+
+.top-bar-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	margin: 0 auto;
+	max-width: $row-width;
+
+	ul.main-menu {
+		display: flex;
+		justify-content: flex-start;
+		list-style: none;
+		margin: 0 $content-spacing 0 0;
+
+		.divider {
+			display: none !important;
+		}
+
+		ul {
+			min-width: 150px;
+			margin: 0;
+			list-style: none;
+			position: absolute;
+			z-index: 99;
+			top: -999em;
+			left: -999em;
+		}
+
+		li {
+			display: inline-block;
+			position: relative;
+
+			&.focus,
+			&:hover {
+				> ul {
+					top: auto;
+					left: auto;
+				}
+			}
+
+			li {
+				display: block;
+
+				&.focus,
+				&:hover {
+					> ul {
+						left: 100%;
+						top: 0;
+					}
+				}
+			}
+
+			a {
+				display: block;
+				white-space: nowrap;
+				padding: rem-calc(20) rem-calc(30);
+				color: #fff;
+				font-size: rem-calc(19);
+				font-weight: 500;
+				text-transform: uppercase;
+				line-height: 1;
+				background-color: darken($secondary-color, 10%);
+				// background-color: rgba(0, 0, 0, 0.1);
+			}
+		}
+
+		// Active & hover styles
+
+		a:hover,
+		li:hover > a,
+		.focus > a,
+		.current-menu-item > a,
+		.current-menu-ancestor > a,
+		li.active a {
+			color: $primary-color;
+			background-color: #fff;
+		}
+
+		.single-product & li.menu-item-shop > a,
+		.post-type-archive-product & li.menu-item-membership > a,
+		.post-type-archive-tribe_events & li.menu-item-events a,
+		.single-tribe_events & li.menu-item-events a,
+		.woocommerce-cart & li.menu-item-membership a,
+		.woocommerce-checkout & li.menu-item-membership a,
+		.page-id-11 & li.menu-item-resources a,
+		.post-type-archive-dmc-conf-papers & li.menu-item-resources a,
+		.single-dmc-conf-papers & li.menu-item-resources a,
+		.post-type-archive-dmc-cons-resources & li.menu-item-resources a,
+		.post-type-archive-dmc-jour-articles & li.menu-item-resources a,
+		.single-dmc-jour-articles & li.menu-item-resources a,
+		.post-type-archive-dmc-legislation & li.menu-item-resources a,
+		.post-type-archive-dmc-library & li.menu-item-resources a,
+		.post-type-archive-dmc-reg-networks & li.menu-item-resources a,
+		.single-post & li.menu-item-news a,
+		.category & li.menu-item-news a,
+		.date & li.menu-item-news a {
+			color: $primary-color;
+			background-color: #fff;
+		}
+
+		// First level item arrows
+
+		.menu-item-has-children {
+			> a {
+				&::before {
+					content: '';
+					position: absolute;
+					right: 8px;
+					top: 50%;
+					transform: translateY(-50%);
+					border: 4px solid transparent;
+					border-top-color: currentColor; // trick to always keep the arrow coloured the same as the menu item's text in each state
+				}
+			}
+		}
+
+		// Submenu styles & second level item arrows
+
+		ul {
+			background-color: $secondary-color;
+
+			.menu-item-has-children {
+				> a {
+					&::before {
+						right: 2px;
+						border-top-color: transparent;
+						border-left-color: currentColor;
+					}
+				}
+			}
+		}
+	}
+}

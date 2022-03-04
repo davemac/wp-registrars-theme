@@ -1,0 +1,104 @@
+.media {
+	display: flex;
+	flex-flow: column;
+
+	@media #{$large-up} {
+		display: flex;
+		flex-flow: row-reverse;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	.media-figure {
+		width: 100%;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+
+		@media #{$large-up} {
+			max-width: rem-calc(150);
+		}
+	}
+}
+
+img.alignright {
+	float: right;
+	margin: 0 0 rem-calc(18) rem-calc(18);
+
+	@media #{$small-only} {
+		float: none;
+		margin-left: 0;
+	}
+}
+
+img.alignleft {
+	float: left;
+	margin: 0 rem-calc(18) rem-calc(18) 0;
+
+	@media #{$small-only} {
+		float: none;
+		margin-right: 0;
+	}
+}
+
+img.aligncenter {
+	display: block;
+	margin: rem-calc(18) auto;
+}
+
+.img-featured {
+	margin: 1rem 0 0;
+}
+
+// Fix gallery images display
+
+.gallery {
+	dt,
+	dl {
+		display: inline-block;
+	}
+
+	dl {
+		margin-left: rem-calc(9);
+		margin-right: rem-calc(9);
+	}
+}
+
+// Add HTML5 Caption Class for Images
+
+figure.figure {
+	margin: 0 auto;
+	display: table;
+
+	figcaption {
+		font-size: rem-calc(14);
+		line-height: 1.4;
+		font-style: italic;
+		padding: 8px 10px;
+		color: #999;
+		//margin-bottom: $panel-margin-bottom;
+		display: table-caption;
+		caption-side: bottom;
+	}
+}
+
+figure.alignright.figure {
+	float: right;
+	margin: 0 0 rem-calc(18) rem-calc(18);
+
+	@media #{$small-only} {
+		float: none;
+		margin-left: 0;
+	}
+}
+
+figure.alignleft.figure {
+	float: left;
+	margin: 0 rem-calc(18) rem-calc(18) 0;
+
+	@media #{$small-only} {
+		float: none;
+		margin-right: 0;
+	}
+}

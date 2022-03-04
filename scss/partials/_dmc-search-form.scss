@@ -1,0 +1,152 @@
+#searchform {
+	max-width: rem-calc(980);
+	width: 100%;
+	padding: 0;
+
+	@media #{$large-up} {
+		margin-top: $content-spacing/2;
+	}
+
+	.single-field-search {
+		position: relative;
+
+		@media #{$medium-up} {
+			width: 100%;
+		}
+
+		.fal {
+			display: none;
+			position: absolute;
+			top: 6px;
+			left: 8px;
+			font-family: FontAwesome, sans-serif;
+			font-style: normal;
+		}
+	}
+
+	input[type='text'] {
+		width: 100%;
+		min-height: rem-calc(35);
+		padding: 0 rem-calc(48) 0 rem-calc(24);
+		font-size: rem-calc(18);
+		font-weight: $font-weight-normal;
+		line-height: 2;
+
+		&::placeholder {
+			color: #ccc;
+			opacity: 0.66;
+		}
+
+		&:placeholder-shown {
+			text-overflow: ellipsis;
+		}
+
+		&:focus {
+			border: 1px solid scale-color($primary-color, $lightness: 18%);
+		}
+	}
+
+	input[type='submit'] {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		width: rem-calc(25);
+		height: rem-calc(25);
+		text-indent: -999px;
+		background-image: url(../img/ic-search-dark.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		border: none;
+		z-index: 9;
+	}
+}
+
+
+/// for mag glass search button within search input (as per iOS search)
+
+// .expanding-sf {
+// 	overflow: hidden;
+// 	width: rem-calc(240);
+
+// 	.form {
+// 		position: relative;
+// 		width: 100%;
+
+// 		.toggle,
+// 		#searchform #searchsubmit,
+// 		.icn {
+// 			position: absolute;
+// 			top: 0;
+// 			right: 0;
+// 			height: rem-calc(47);
+// 			width: rem-calc(47);
+// 			padding: rem-calc(8);
+// 			color: #000;
+// 			text-align: center;
+// 			background-color: $primary-color;
+// 			border: none;
+// 			border-radius: $global-radius;
+// 			cursor: pointer;
+
+// 			&::after {
+// 				content: '\f002';
+// 				font-family: FontAwesome;
+// 				font-size: 1.6rem;
+// 				line-height: 1.2;
+// 			}
+// 		}
+
+// 		input[type='text'] {
+
+// 			&::-webkit-input-placeholder {
+// 				color: #676667;
+// 			}
+
+// 			&::-moz-placeholder {
+// 				color: #676667;
+// 			}
+
+// 			&:-ms-input-placeholder {
+// 				color: #676667;
+// 			}
+
+// 			&:-moz-placeholder {
+// 				color: #676667;
+// 			}
+
+// 			&:focus {
+// 				border: 1px solid scale-color( $anchor-font-color, $lightness: 18% );
+// 			}
+// 		}
+
+// 		#searchsubmit {
+// 			background: url('../img/ic-search.png') no-repeat center center !important;
+// 		}
+
+// 		#searchform {
+// 			width: 100%;
+// 			height: rem-calc(47);
+// 			margin: 0;
+// 			opacity: 0;
+// 			transition: 600ms ease-in-out;
+// 			visibility: hidden;
+
+// 			#s {
+// 				height: 100%;
+// 				color: $body-font-color;
+// 				font-size: rem-calc(14);
+// 				padding: 0 rem-calc(15);
+// 				background-color: $bg-light;
+// 				border: 1px solid #444;
+// 			}
+// 		}
+
+// 		&:hover #searchform {
+// 			width: 100%;
+// 			opacity: 1;
+// 			transition: 600ms ease-in-out;
+// 			visibility: visible;
+// 		}
+// 	}
+// }

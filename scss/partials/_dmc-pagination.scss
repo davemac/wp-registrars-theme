@@ -1,0 +1,37 @@
+.page-numbers {
+	display: flex;
+	margin: 0;
+	color: #999;
+
+	// @include pagination;
+}
+
+.pagination {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+
+	ul.page-numbers li {
+		display: flex;
+		font-size: rem-calc(16);
+		font-weight: $font-weight-normal;
+	}
+}
+
+.page-numbers li {
+	margin-right: $content-spacing;
+
+	span:hover a,
+	span a:focus {
+		background: scale-color(#fff, $lightness: -10%);
+	}
+
+	span.current {
+		background: $primary-color;
+		padding: rem-calc(1 10 1);
+		color: #fff;
+		font-weight: $font-weight-bold;
+		cursor: default;
+	}
+}

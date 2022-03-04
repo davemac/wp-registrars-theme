@@ -1,0 +1,89 @@
+{
+    "key": "group_5519ed7c40445",
+    "title": "Feature Item",
+    "fields": [
+        {
+            "key": "field_5519ed8688786",
+            "label": "Feature this item on homepage?",
+            "name": "dmc_feature_item",
+            "type": "checkbox",
+            "instructions": "If checked, this item will featured on the homepage.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes, feature this item"
+            },
+            "default_value": {
+                "no": "no"
+            },
+            "layout": "horizontal",
+            "toggle": 0
+        },
+        {
+            "key": "field_552c833eba2c9",
+            "label": "Tagline for featured item",
+            "name": "dmc_featured_item_tagline",
+            "type": "text",
+            "instructions": "This tagline will be used instead of the item's title when the item is featured on the homepage.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5519ed8688786",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Type item tagline here",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "jetpack-portfolio"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "dmc-rolemodels"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1441602933
+}

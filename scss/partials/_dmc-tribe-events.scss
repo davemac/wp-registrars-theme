@@ -1,0 +1,63 @@
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-search__button {
+	background-color: $cart-color;
+}
+
+#tribe-events-pg-template {
+
+	.tribe-events-schedule {
+		display: flex;
+		justify-content: space-between;
+		padding: $content-spacing/2;
+		color: #fff;
+		background-color: $cart-color;
+
+		h2 {
+			color: #fff;
+		}
+	}
+
+	.tribe-events-content {
+		width: 100% !important;
+
+		h2 {
+			padding: $content-spacing 0 $content-spacing/2;
+			font-size: rem-calc(26) !important;
+			color: #0075a0;
+			border-bottom: 1px solid #0075a0;
+		}
+
+		a {
+			font-weight: $font-weight-bold;
+			color: $cart-color;
+			text-decoration: underline;
+		}
+
+		ul li {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.woocommerce {
+	.quantity {
+		.qty {
+			width: 4rem;
+		}
+
+		input[type='number'] {
+			margin-bottom: 0;
+			font-size: rem-calc(24);
+		}
+	}
+
+	.button.button.alt {
+		background-color: #42b574;
+	}
+}
+
+.tribe-events-tickets {
+	.qty {
+		width: 6rem !important;
+	}
+}

@@ -1,0 +1,67 @@
+{
+    "key": "group_56c2a49f161fe",
+    "title": "User fields",
+    "fields": [
+        {
+            "key": "field_5ea948d168dc5",
+            "label": "Show my information in the Members Directory?",
+            "name": "dmc_allow_member_directory",
+            "type": "true_false",
+            "instructions": "The Members Directory is only visible to logged in members, it is not publicly accessible.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Show my information in the Members Directory",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_56c2a4a2bd59c",
+            "label": "Author photo",
+            "name": "dmc_author_photo",
+            "type": "image",
+            "instructions": "Please ensure photo has square dimensions",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": ".2",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "user_form",
+                "operator": "==",
+                "value": "edit"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1588153880
+}

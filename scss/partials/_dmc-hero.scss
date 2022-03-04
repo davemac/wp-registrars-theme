@@ -1,0 +1,52 @@
+.page-hero {
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-around;
+	padding: $content-spacing !important;
+	background-position: center;
+	background-size: cover;
+	height: 25vh;
+
+	.home & {
+		height: 60vh;
+	}
+
+	.sub-title {
+		max-width: $row-width/1.5;
+		padding: $content-spacing;
+		width: 100%;
+		text-align: center;
+		background-color: transparentize($secondary-color, 0.56);
+
+		h1 {
+			margin: 0;
+			color: #fff;
+			font-size: rem-calc(28);
+			font-weight: $font-weight-normal;
+			line-height: 1.3;
+
+			@media #{$medium-up} {
+				font-size: rem-calc(38);
+			}
+
+			@media #{$xlarge-up} {
+				font-size: rem-calc(56);
+			}
+
+			span {
+				color: $primary-color;
+			}
+
+		}
+	}
+
+	.blend-overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		// background-color: transparentize($secondary-color, 0.7);
+	}
+}
