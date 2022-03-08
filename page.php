@@ -26,10 +26,6 @@ while ( have_posts() ) :
 
 			</article>
 
-			<?php
-			// get_sidebar();
-			?>
-
 		</div>
 
 	</div>

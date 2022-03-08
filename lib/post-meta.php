@@ -54,7 +54,7 @@ function dmcstarter_entry_meta() {
 		<?php
 		if ( is_single() || is_front_page() || is_post_type_archive( 'post' ) || is_search() ) :
 
-			// dmc_display_post_tax_terms();
+			dmc_display_post_tax_terms();
 
 			$num_comments = get_comments_number(); // get_comments_number returns only a numeric value
 			if ( comments_open() ) :
@@ -72,9 +72,9 @@ function dmcstarter_entry_meta() {
 				$write_comments = __( '<span class="comment-result">Comments off</span>' );
 			endif;
 			?>
-			<!-- <span class="comments comment-results">
-				<?php // echo $write_comments; ?>
-			</span> -->
+			<span class="comments comment-results">
+				<?php echo $write_comments; ?>
+			</span>
 			<?php
 		endif;
 		?>

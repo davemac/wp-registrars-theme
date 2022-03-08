@@ -1,71 +1,62 @@
-<?php get_header(); ?>
+<?php
+get_header();
+?>
 
-	<div class="medium-9 columns" id="content" role="main">
+	<div <?php post_class(); ?> >
 
-	<header>
-		<h2 class="archive-title">
+		<section class="page-hero" <?php dmc_display_featured_img_bg(); ?>>
+			<div class="sub-title">
+				<h1 class="page-title">
+					hello
+					<?php if ( is_category() ) : ?>
+						articles categorised '<?php single_cat_title(); ?>'
+z				<?php elseif ( is_post_type_archive( 'post' ) || is_home() ) : ?>
 
-			<?php if ( is_category() ) : ?>
-				<span>
-					articles categorised '<?php single_cat_title(); ?>'
-				</span>
-			<?php elseif ( is_post_type_archive( 'post' ) || is_home() ) : ?>
+					News
+				<?php elseif ( is_author() ) : ?>
 
-				<span>News</span>
-			<?php elseif ( is_author() ) : ?>
-				<span>
-					Articles by <?php the_author(); ?>
-				</span>
+						Articles by <?php the_author(); ?>
 
-			<?php elseif ( is_tag() ) : ?>
-				<span>
-					Archive for tag '<?php single_tag_title(); ?>'
-				</span>
+				<?php elseif ( is_tag() ) : ?>
 
-			<?php elseif ( is_post_type_archive() ) : ?>
-				<?php $dmc_post_type = get_queried_object(); ?>
-				<span>
-					<?php echo esc_html( $dmc_post_type->labels->singular_name ); ?>
-				</span>
+						Archive for tag '<?php single_tag_title(); ?>'
 
-			<?php elseif ( is_archive() ) : ?>
-				<span>
-					News archive for <?php single_month_title( ' ' ); ?>
-				</span>
-			<?php endif; ?>
-		</h2>
-	</header>
 
-	<?php if ( have_posts() ) : ?>
+				<?php elseif ( is_post_type_archive() ) : ?>
+					<?php $dmc_post_type = get_queried_object(); ?>
+
+						<?php echo esc_html( $dmc_post_type->labels->singular_name ); ?>
+
+
+				<?php elseif ( is_archive() ) : ?>
+
+						News archive for <?php single_month_title( ' ' ); ?>
+
+				<?php endif; ?>
+				</h1>
+			</div>
+			<!-- <div class="blend-overlay"></div> -->
+		</section>
+
+
 
 		<?php
-		while ( have_posts() ) :
-			the_post();
-			?>
+		if ( have_posts() ) :
+			while ( have_posts() ) :
+				the_post();
 
-			<?php
-			if ( is_post_type_archive( array( 'dmc-cons-resources', 'dmc-legislation', 'dmc-reg-networks' ) ) ) {
+				get_template_part( 'content' );
 
-				get_template_part( 'content', 'dmc-external-link' );
+			endwhile;
 
-			} elseif ( is_archive() || is_home() || is_month() ) {
-
-				get_template_part( 'content', get_post_format() );
-
-			} else {
+		else :
 				get_template_part( 'content', 'none' );
-			};
-			?>
+		endif;
 
-		<?php endwhile; ?>
+		dmc_display_pagination();
+		?>
 
-	<?php endif; ?>
-
-		<?php dmc_display_pagination(); ?>
-
-		</div>
-
-	<?php get_sidebar(); ?>
+	</div>
 
 <?php
 get_footer();
