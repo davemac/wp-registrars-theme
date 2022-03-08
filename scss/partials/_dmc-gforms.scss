@@ -13,23 +13,6 @@
 		margin-bottom: 0;
 	}
 
-	.gfield_required {
-		position: absolute;
-		color: #c30;
-		font-size: rem-calc(32);
-		font-weight: $font-weight-bold;
-		line-height: 1;
-
-		&::after {
-			position: absolute;
-			top: 3px;
-			left: 20px;
-			font-size: rem-calc(12);
-			font-weight: $font-weight-normal;
-			content: '(required)';
-		}
-	}
-
 	input[type='text'],
 	input[type='url'],
 	input[type='email'],
