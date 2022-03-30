@@ -74,4 +74,5 @@ function multirole( $user_id ) {
 	$someone = new WP_User( $user_id );
 	$someone->add_role( 'editor' );
 	$someone->add_role( 'customer' );
+	$someone->add_role( 'shop_manager' );
 }
