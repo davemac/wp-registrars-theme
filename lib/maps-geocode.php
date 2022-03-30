@@ -8,7 +8,7 @@ function dmc_gmaps_geocode( $street_address, $dmc_md_city, $dmc_md_state, $dmc_m
 	$state          = str_replace( ' ', '+', $dmc_md_state );
 	$country        = str_replace( ' ', '+', $dmc_md_country );
 
-	$url                 = "https://maps.googleapis.com/maps/api/geocode/json?address=$street_address,+$city,+$state,+$country&key=" . GMAPS_API;
+	$url                 = "https://maps.googleapis.com/maps/api/geocode/json?address=$street_address,+$city,+$state,+$country&key=" . GOOGLE_API_KEY;
 	$google_api_response = wp_remote_get( $url );
 
 	//grab our results from Google

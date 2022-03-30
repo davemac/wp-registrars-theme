@@ -69,3 +69,9 @@ require_once get_template_directory() . '/lib/member-directory/arc-council.php';
 
 require_once get_template_directory() . '/lib/member-directory/action-dmc-edit-member-callback.php';
 // require_once get_template_directory() . '/lib/member-directory/action-dmc-moveout-member-callback.php';
+
+function multirole( $user_id ) {
+	$someone = new WP_User( $user_id );
+	$someone->add_role( 'editor' );
+	$someone->add_role( 'customer' );
+}
